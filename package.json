@@ -1,12 +1,12 @@
 {
   "name": "recanto-nazareno",
   "version": "1.0.0",
-  "description": "",
+  "description": "Site Chácara Recanto Nazareno",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Site", "Recanto Nazareno", "Chácara"],
+  "author": "Marley de Sousa Santos",
   "license": "ISC"
 }
