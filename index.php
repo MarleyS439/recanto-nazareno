@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Marley de S. Santos">
-    <link rel="shortcut icon" href="../assets/images/logo.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/logo.jpeg" type="image/x-icon">
     <title>Recanto Nazareno</title>
-    <link rel="stylesheet" type="text/css" href="/views/assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="../assets/libraries/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="../assets/libraries/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/libraries/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./assets/libraries/slick-1.8.1/slick/slick-theme.css">
 </head>
 
 <body>
@@ -20,9 +20,9 @@
         <!-- Navegação-->
         <nav>
             <!-- Logo -->
-            <a href="index.html">
+            <a href="index.php">
                 <div class="logo-area">
-                    <img src="../assets/images/logo.jpeg" alt="Logo">
+                    <img src="./assets/images/logo.jpeg" alt="Logo">
                     <span>Recanto Nazareno</span>
                 </div>
             </a>
@@ -31,7 +31,7 @@
             <!-- Ícone de menu mobile -->
             <div class="menu-icon">
                 <svg width="50" height="50">
-                    <image href="../assets/images/icons/menu.svg" width="50" height="50" />
+                    <image href="./assets/images/icons/menu.svg" width="50" height="50" />
                 </svg>
             </div>
 
@@ -43,7 +43,7 @@
                 <li><a href="#">Instalação</a></li>
                 <li><a href="#">Galeria</a></li>
                 <li><a href="#">Contato</a></li>
-                <li id=""><a href="#">Orçamento online</a></li>
+                <li id="orcamentoOnline"><a href="#">Orçamento online</a></li>
             </ul>
 
             <!-- Menu desktop -->
@@ -69,7 +69,7 @@
 
         <!-- Título do header -->
         <div class="title-header">
-            <div>
+            <div class="content">
                 <h1>Chácara Recanto Nazareno</h1>
                 <p>Onde cada momento se torna uma lembrança inesquecível</p>
             </div>
@@ -88,7 +88,7 @@
         <section class="about" id="sobre">
             <div class="about-info">
                 <div>
-                    <img src="../assets/images/logo.jpeg" alt="Logo Chácara Recanto Nazareno">
+                    <img src="./assets/images/logo.jpeg" alt="Logo Chácara Recanto Nazareno">
                     <h2>O Recanto Nazareno</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias vitae aperiam eius, dolor
                         alias
@@ -119,49 +119,49 @@
 
         <section class="eventos">
             <div class="card">
-                <img src="../assets/images/chacara001.jpeg" alt="">
+                <img src="./assets/images/chacara001.jpeg" alt="">
                 <div class="texto">
                     <span>Casamentos</span>
                 </div>
             </div>
 
             <div class="card">
-                <img src="../assets/images/chacara001.jpeg" alt="">
+                <img src="./assets/images/chacara001.jpeg" alt="">
                 <div class="texto">
                     <span>Aniversários</span>
                 </div>
             </div>
 
             <div class="card">
-                <img src="../assets/images/chacara001.jpeg" alt="">
+                <img src="./assets/images/chacara001.jpeg" alt="">
                 <div class="texto">
                     <span>Confraternizações</span>
                 </div>
             </div>
 
             <div class="card">
-                <img src="../assets/images/chacara001.jpeg" alt="">
+                <img src="./assets/images/chacara001.jpeg" alt="">
                 <div class="texto">
                     <span>Eventos Corporativos</span>
                 </div>
             </div>
 
             <div class="card">
-                <img src="../assets/images/chacara001.jpeg" alt="">
+                <img src="./assets/images/chacara001.jpeg" alt="">
                 <div class="texto">
                     <span>Eventos personalizados</span>
                 </div>
             </div>
 
             <div class="card">
-                <img src="../assets/images/chacara001.jpeg" alt="">
+                <img src="./assets/images/chacara001.jpeg" alt="">
                 <div class="texto">
                     <span>Eventos Religiosos</span>
                 </div>
             </div>
 
             <div class="card">
-                <img src="../assets/images/Screenshot_20240117_230805_Maps.png" alt="">
+                <img src="./assets/images/Screenshot_20240117_230805_Maps.png" alt="">
                 <div class="texto">
                     <span>Chás de Revelação e Bebê</span>
                 </div>
@@ -171,27 +171,27 @@
         <section class="gallery">
             <div class="parent">
                 <div class="div1">
-                    <img src="../assets/images/header-image.jpeg" alt="">
+                    <img src="./assets/images/header-image.jpeg" alt="">
                 </div>
 
                 <div class="div2">
-                    <img src="../assets/images/chacara013.jpeg" alt="">
+                    <img src="./assets/images/chacara013.jpeg" alt="">
                 </div>
 
                 <div class="div3">
-                    <img src="../assets/images/chacara027.jpeg" alt="">
+                    <img src="./assets/images/chacara027.jpeg" alt="">
                 </div>
 
                 <div class="div4">
-                    <img src="../assets/images/chacara005.jpeg" alt="">
+                    <img src="./assets/images/chacara005.jpeg" alt="">
                 </div>
 
                 <div class="div5">
-                    <img src="../assets/images/chacara012.jpeg" alt="">
+                    <img src="./assets/images/chacara012.jpeg" alt="">
                 </div>
 
                 <div class="div6">
-                    <img src="../assets/images/chacara006.jpeg" alt="">
+                    <img src="./assets/images/chacara006.jpeg" alt="">
                 </div>
             </div>
         </section>
@@ -244,21 +244,21 @@
 
             <div class="social-medias">
                 <a href="https://www.instagram.com/recantonazareno/" title="Instagram Recanto Nazareno" target="_blank">
-                    <img src="../assets/images/icons/instagram-svgrepo-com(1).svg" alt="Instagram Recanto Nazareno">
+                    <img src="./assets/images/icons/instagram-svgrepo-com(1).svg" alt="Instagram Recanto Nazareno">
                     <span>Instagram</span>
                 </a>
                 <a href="https://www.facebook.com/recantonazareno/" title="Facebook Recanto Nazareno" target="_blank">
-                    <img src="../assets/images/icons/facebook-svgrepo-com.svg" alt="Facebook Recanto Nazareno">
+                    <img src="./assets/images/icons/facebook-svgrepo-com.svg" alt="Facebook Recanto Nazareno">
                     <span>Facebook</span>
                 </a>
                 <a href="https://www.tiktok.com/" title="TikTok Chácara Recanto Nazareno" target="_blank">
-                    <img src="../assets/images/icons/tiktok-svgrepo-com.svg" alt="TikTok Recanto Nazareno">
+                    <img src="./assets/images/icons/tiktok-svgrepo-com.svg" alt="TikTok Recanto Nazareno">
                     <span>TikTok</span>
                 </a>
 
                 <a href="https://www.youtube.com/recantonazareno/" title="YouTube Chácara Recanto Nazareno"
                     target="_blank">
-                    <img src="../assets/images/icons/youtube-svgrepo-com.svg" alt="YouTube Recanto Nazareno">
+                    <img src="./assets/images/icons/youtube-svgrepo-com.svg" alt="YouTube Recanto Nazareno">
                     <span>YouTube</span>
                 </a>
             </div>
@@ -277,13 +277,13 @@
 
     <div class="whatsapp-icon circle pulse">
         <a href="https://wa.me/5511996390560" target="_blank">
-            <img src="../assets/images/icons/whatsapp1.png" alt="WhatsApp">
+            <img src="./assets/images/icons/whatsapp1.png" alt="WhatsApp">
         </a>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="../assets/libraries/slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./assets/libraries/slick-1.8.1/slick/slick.min.js"></script>
 
     <script>
         $('.eventos').slick({
@@ -294,8 +294,8 @@
             speed: 100,
             slidesToShow: 3,
             slidesToScroll: 4,
-            prevArrow: false,
-            nextArrow: false,
+            prevArrow: true,
+            nextArrow: true,
             responsive: [
                 {
                     breakpoint: 1024,
