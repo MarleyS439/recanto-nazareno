@@ -173,11 +173,11 @@
     }
 
     /* Gallery */
-
     .title-images {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 50px;
     }
 
     .title-images h3 {
@@ -205,8 +205,22 @@
         display: none;
     }
 
-    .fotos, .fotos2 {
+    .fotos,
+    .fotos2 {
         margin: 50px 0px;
+    }
+
+    /* Sobre */
+    main .about {
+        padding: 5% 5% 0% 5%;
+        margin: 0% 5%;
+    }
+
+    .about .info h2, h3 {
+        color: var(--preto);
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
     }
 
 

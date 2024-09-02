@@ -33,6 +33,10 @@
     <link href="assets/libraries/lightbox2-2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
     <script src="assets/libraries/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Title -->
     <title>Chácara Recanto Nazareno</title>
@@ -53,11 +57,11 @@
 
             <!-- Links -->
             <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="index.php">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Instalação</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Galeria</a></li>
             </ul>
 
             <div class="action">
@@ -82,6 +86,28 @@
 
     <main>
 
+        <section class="about">
+            <div class="info">
+                <h2>Bem-vindo à Chácara Recanto Nazareno</h2>
+
+                <p>Descubra o ambiete aconchegante e tranquilo da Chácara Recanto Nazareno, o local perfeito para tornar seus eventos e momentos especiais inesquecíveis. Situada em um cenário entre a cidade e o campo, nossa chácara oferece um ambiente acolhedor e harmonioso, ideal para celebrações, encontros familiares, aniversários, eventos corporativos e muito mais.</p>
+            </div>
+
+            <div class="info">
+                <h3>Sobre a Chácara</h3>
+
+                <p>A Chácara Recanto Nazareno é um espaço cuidadosamente projetado para proporcionar uma experiência única e memorável. Com amplas áreas ao ar livre e instalações modernas, nossa chácara combina o conforto e a praticidade com a beleza da natureza. Aqui, você encontrará:</p>
+
+                <ul>
+                    <li><strong>Áreas Verdes:</strong> Amplos jardins e áreas gramadas que criam um ambiente relaxante e perfeito para atividades ao ar livre.</li>
+
+                    <li><strong>Estruturas e Acomodações: </strong>Espaços versáteis que podem ser adaptados para eventos de diferentes tamanhos, com infraestrutura completa para garantir seu conforto e conveniência.</li>
+
+                    <li><strong>Ambiente Tranquilo: </strong>Uma atmosfera tranquila e privativa, longe da agitação urbana, ideal para uma pausa relaxante ou uma celebração em grande estilo.</li>
+                </ul>
+            </div>
+        </section>
+
         <section class="gallery-images">
 
             <div class="title-images">
@@ -105,9 +131,14 @@
                 ?>
             </div>
 
+
+            <div class="title-images">
+                <h3>Área Interna</h3>
+            </div>
+
             <div class="gallery fotos2">
                 <?php
-                $quantidade_imagens =  range(1, 15);
+                $quantidade_imagens =  range(1, 14);
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
@@ -144,7 +175,7 @@
 
                     <div class="informations">
                         <label for="quantidade">Quantidade de convidados</label>
-                        <input type="number" name="quantidade" id="quantidade" min="1" max="200" placeholder="Máximo de 200 convidados">
+                        <input type="number" name="quantidade" id="quantidade" min="1" max="600" placeholder="Máximo de 600 convidados">
                     </div>
 
                     <div class="informations">
@@ -178,16 +209,14 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <script>
-        lightbox.option({
-            'albumLabel': 'Imagem %1 de %2'
-        });
-    </script>
+    <script type="text/javascript" src="assets/javascript/lightBox.js"></script>
 
+    <script type="text/javascript" src="assets/libraries/slick-1.8.1/slick/slick.min.js"></script>
 
-    <script src="assets/libraries/slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/cards.js"></script>
 
-    <script src="assets/javascript/cards.js"></script>
+    <!-- Phone Number Formatter -->
+    <script type="text/javascript" src="assets/javascript/phoneNumberFormatter.js"></script>
 </body>
 
 </html>
