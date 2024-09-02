@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Diretório de entrada
-INPUT_DIR="/opt/lampp/htdocs/recanto-nazareno/assets/images/gallery/External"
+INPUT_DIR="/opt/lampp/htdocs/recanto-nazareno/assets/images/gallery/Internal"
 
 # Verifica se o diretório existe
 if [ ! -d "$INPUT_DIR" ]; then
