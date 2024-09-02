@@ -1,0 +1,9 @@
+.slick-prev,
+.slick-next {
+    display: block !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: black !important;
+    background-color: var(--dourado) !important;
+}

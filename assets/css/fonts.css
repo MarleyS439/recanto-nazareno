@@ -1,0 +1,10 @@
+/* Fontes tipográficas */
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+}
