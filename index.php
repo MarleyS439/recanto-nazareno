@@ -124,7 +124,7 @@
 
             <div class="gallery fotos">
                 <?php
-                $quantidade_imagens =  range(1, 41);
+                $quantidade_imagens =  range(1, 40);
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
@@ -150,7 +150,7 @@
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
-                        <a href="assets/images/gallery/Internal/' . $numero . '.avif" data-lightbox="mygallery">
+                        <a href="assets/images/gallery/Internal/' . $numero . '.avif" data-lightbox="gallery">
                             <img src="assets/images/gallery/Internal/' . $numero . '.avif" alt="' . $numero . '">
 
                             <!-- Preview -->

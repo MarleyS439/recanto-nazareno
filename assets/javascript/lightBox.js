@@ -1,3 +1,3 @@
 lightbox.option({
-    'albumLabel': 'Imagem %1 de %2'
+    'albumLabel': 'Foto %1',
 });
