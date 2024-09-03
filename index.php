@@ -106,6 +106,14 @@
                     <li><strong>Ambiente Tranquilo: </strong>Uma atmosfera tranquila e privativa, longe da agitação urbana, ideal para uma pausa relaxante ou uma celebração em grande estilo.</li>
                 </ul>
             </div>
+
+            <div class="info">
+                <h3>Por que o Recanto Nazareno</h3>
+
+                <p>Escolher a Chácara Recanto Nazareno é optar por um ambiente que combina o melhor da natureza com conforto e sofisticação. Aqui, cada detalhe é pensado para oferecer a melhor experiência possível, desde o momento da chegada até o final do evento.  </p>
+
+                <p>Seja para um evento íntimo ou uma grande celebração, a Chácara Recanto Nazareno é o local ideal para criar memórias inesquecíveis. Entre em contato conosco para saber mais sobre nossos serviços e como podemos tornar seu evento especial.</p>
+            </div>
         </section>
 
         <section class="gallery-images">
@@ -116,15 +124,15 @@
 
             <div class="gallery fotos">
                 <?php
-                $quantidade_imagens =  range(1, 42);
+                $quantidade_imagens =  range(1, 41);
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
-                        <a href="assets/images/gallery/External/' . $numero . '.jpg" data-lightbox="mygallery">
-                            <img src="assets/images/gallery/External/' . $numero . '.jpg" alt="' . $numero . '">
+                        <a href="assets/images/gallery/External/' . $numero . '.webp" data-lightbox="mygallery">
+                            <img src="assets/images/gallery/External/' . $numero . '.webp" alt="' . $numero . '">
 
                             <!-- Preview -->
-                            <img src="assets/images/gallery/External/' . $numero . '.jpg" alt="' . $numero . '">
+                            <img src="assets/images/gallery/External/' . $numero . '.webp" alt="' . $numero . '">
                         </a>
                     ';
                 }
