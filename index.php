@@ -128,11 +128,11 @@
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
-                        <a href="assets/images/gallery/External/' . $numero . '.webp" data-lightbox="mygallery">
-                            <img src="assets/images/gallery/External/' . $numero . '.webp" alt="' . $numero . '">
+                        <a href="assets/images/gallery/External/' . $numero . '.avif" data-lightbox="mygallery">
+                            <img src="assets/images/gallery/External/' . $numero . '.avif" alt="' . $numero . '">
 
                             <!-- Preview -->
-                            <img src="assets/images/gallery/External/' . $numero . '.webp" alt="' . $numero . '">
+                            <img src="assets/images/gallery/External/' . $numero . '.avif" alt="' . $numero . '">
                         </a>
                     ';
                 }
@@ -150,11 +150,11 @@
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
-                        <a href="assets/images/gallery/Internal/' . $numero . '.jpg" data-lightbox="mygallery">
-                            <img src="assets/images/gallery/Internal/' . $numero . '.jpg" alt="' . $numero . '">
+                        <a href="assets/images/gallery/Internal/' . $numero . '.avif" data-lightbox="mygallery">
+                            <img src="assets/images/gallery/Internal/' . $numero . '.avif" alt="' . $numero . '">
 
                             <!-- Preview -->
-                            <img src="assets/images/gallery/Internal/' . $numero . '.jpg" alt="' . $numero . '">
+                            <img src="assets/images/gallery/Internal/' . $numero . '.avif" alt="' . $numero . '">
                         </a>
                     ';
                 }

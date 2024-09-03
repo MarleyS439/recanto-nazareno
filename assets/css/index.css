@@ -14,7 +14,7 @@
     header {
         height: 100vh;
         width: 100%;
-        background-image: url(../images/header-image.png);
+        background-image: url(../images/header-image.avif);
         background-position: center center;
         background-size: cover;
     }
