@@ -4,6 +4,8 @@ $('.fotos').slick({
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 500,
+    prevArrow: true,
+    nextArrow: true,
     slidesToShow: 3,
     slidesToScroll: 2,
     responsive: [
@@ -35,6 +37,7 @@ $('.fotos').slick({
                 slidesToScroll: 1,
                 prevArrow: true,
                 nextArrow: true,
+                dots: false
             }
         }
     ]
@@ -72,8 +75,9 @@ $('.fotos2').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                prevArrow: true,
-                nextArrow: true,
+                prevArrow: false,
+                nextArrow: false,
+                dots: false
             }
         }
     ]

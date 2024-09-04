@@ -1,9 +1,39 @@
-.slick-prev,
-.slick-next {
-    display: block !important;
-    z-index: 1000 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    color: black !important;
-    background-color: var(--dourado) !important;
+@media screen and (max-width: 768px) {
+
+    .slick-prev,
+    .slick-next {
+        display: block !important;
+        z-index: 1000 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: black !important;
+        background-color: var(--dourado) !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1027px) {
+
+    .slick-prev,
+    .slick-next {
+        display: block !important;
+        z-index: 1000 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: black !important;
+        background-color: var(--dourado) !important;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .slick-prev,
+    .slick-next {
+        display: block !important;
+        z-index: 1000 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: black !important;
+        background-color: var(--dourado) !important;
+    }
 }

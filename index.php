@@ -147,7 +147,6 @@
                     <li>Fogões cooktop e industrial</li>
                     <li>Geladeira</li>
                     <li>Tomadas 110V e 220V</li>
-                    <li>Caixa de som</li>
                     <li>Wi-fi</li>
                     <li>Banheiros masculinos e femininos com chuveiro</li>
                     <li>Chuveiro ao ar-livre</li>
@@ -212,7 +211,7 @@
                 <h2>Solicite um Orçamento</h2>
             </div>
 
-            <form action="" method="post">
+            <form action="controller/processing.php" method="post">
                 <div class="container-form">
                     <div class="informations">
                         <label for="nome">Nome</label>
@@ -231,7 +230,7 @@
 
                     <div class="informations">
                         <label for="data">Data do evento</label>
-                        <input type="date" name="data" id="data">
+                        <input type="date" name="data" id="data" placeholder="Selecionar data">
                     </div>
 
                     <div class="informations">
@@ -282,7 +281,7 @@
                     <span>TikTok</span>
                 </a>
 
-                <a href="https://youtube.com/" title="Ver no YouTube" target="_blank">
+                <a href="https://www.youtube.com/@recanto-nazareno" title="Ver no YouTube" target="_blank">
                     <img src="assets/icons/youtube-svgrepo-com.svg" alt="Ícone do YouTube" id="youtube">
                     <span>YouTube</span>
                 </a>
@@ -297,7 +296,7 @@
     </footer>
 
     <div class="whatsapp-icon circle pulse">
-        <a href="https://wa.me/5511996390560" target="_blank">
+        <a href="https://wa.me/551146783969" target="_blank">
             <img src="assets/icons/whatsapp1.png" alt="WhatsApp">
         </a>
     </div>
