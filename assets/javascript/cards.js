@@ -5,13 +5,13 @@ $('.fotos').slick({
     autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     responsive: [
         {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: false,
                 prevArrow: true,
@@ -22,7 +22,7 @@ $('.fotos').slick({
             breakpoint: 600,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 prevArrow: true,
                 nextArrow: true,
 
@@ -47,13 +47,13 @@ $('.fotos2').slick({
     autoplaySpeed: 3000,
     speed: 1000,
     slidesToShow: 3,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     responsive: [
         {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: false,
                 prevArrow: true,

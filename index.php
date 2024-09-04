@@ -10,15 +10,17 @@
 
     <!-- HTML Meta Tags -->
     <meta name="author" content="Marley de S. Santos">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Locação de Espaço com Piscina para Eventos e Confraternizações. Alugue um espaço para seu evento unindo o melhor entre a cidade e o campo.">
+    <meta name="keywords" content="Chácara, Recanto, Nazareno, Chácara Recanto Nazareno, Ferraz de Vasconcelos, Chácara em Ferraz de Vasconcelos, Ferraz, Ferraz de Vasconcelos, Chácara Para Locação Em Ferraz de Vasconcelos, ">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="https://www.recantonazareno.com.br">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chácara Recanto Nazareno - Espaço para Eventos e Confraternizações">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
+    <meta property="og:description" content="Locação de Espaço com Piscina para Eventos e Confraternizações. Alugue um espaço para seu evento unindo o melhor entre a cidade e o campo.">
+    <meta property="og:image" content="recanto-nazareno/assets/images/banner.png">
+    <meta property="og:site_name" content="Chácara Recanto Nazareno">
     <meta property="og:image:width" content="740">
     <meta property="og:image:height" content="522">
 
@@ -33,10 +35,15 @@
     <link href="assets/libraries/lightbox2-2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
     <script src="assets/libraries/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Title -->
     <title>Chácara Recanto Nazareno</title>
@@ -57,11 +64,11 @@
 
             <!-- Links -->
             <ul>
-                <li><a href="index.php">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Instalação</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#instalacao">Instalação</a></li>
+                <!-- <li><a href="#">Eventos</a></li> -->
+                <li><a href="#galeria">Galeria</a></li>
             </ul>
 
             <div class="action">
@@ -86,37 +93,72 @@
 
     <main>
 
-        <section class="about">
-            <div class="info">
-                <h2>Bem-vindo à Chácara Recanto Nazareno</h2>
+        <section class="welcome">
 
-                <p>Descubra o ambiete aconchegante e tranquilo da Chácara Recanto Nazareno, o local perfeito para tornar seus eventos e momentos especiais inesquecíveis. Situada em um cenário entre a cidade e o campo, nossa chácara oferece um ambiente acolhedor e harmonioso, ideal para celebrações, encontros familiares, aniversários, eventos corporativos e muito mais.</p>
+            <div class="overlay-welcome"></div>
+
+            <div class="container-welcome">
+                <h2>Bem-vindo ao Recanto Nazareno!</h2>
+
+                <p>Descubra o ambiete aconchegante e tranquilo da Chácara Recanto Nazareno, o local perfeito para tornar seus eventos e momentos especiais inesquecíveis. <br><br>Situada em um cenário entre a cidade e o campo, nossa chácara oferece um ambiente acolhedor e harmonioso, ideal para celebrações, encontros familiares, aniversários, eventos corporativos e muito mais.</p>
             </div>
+
+        </section>
+
+        <section class="about" id="sobre">
 
             <div class="info">
                 <h3>Sobre a Chácara</h3>
 
-                <p>A Chácara Recanto Nazareno é um espaço cuidadosamente projetado para proporcionar uma experiência única e memorável. Com amplas áreas ao ar livre e instalações modernas, nossa chácara combina o conforto e a praticidade com a beleza da natureza. Aqui, você encontrará:</p>
+                <p>A Chácara Recanto Nazareno é um espaço cuidadosamente projetado para proporcionar uma experiência única e memorável. Com amplas áreas ao ar livre, nossa chácara combina o conforto e a praticidade com a beleza da natureza. Aqui, você encontrará:</p>
 
                 <ul>
-                    <li><strong>Áreas Verdes:</strong> Amplos jardins e áreas gramadas que criam um ambiente relaxante e perfeito para atividades ao ar livre.</li>
+                    <li><em>Áreas Verdes:</em> Amplos jardins e áreas gramadas que criam um ambiente relaxante e perfeito para atividades ao ar livre.</li>
 
-                    <li><strong>Estruturas e Acomodações: </strong>Espaços versáteis que podem ser adaptados para eventos de diferentes tamanhos, com infraestrutura completa para garantir seu conforto e conveniência.</li>
+                    <li><em>Estruturas e Acomodações: </em>Espaços versáteis que podem ser adaptados para eventos de diferentes tamanhos, com infraestrutura completa para garantir seu conforto e conveniência.</li>
 
-                    <li><strong>Ambiente Tranquilo: </strong>Uma atmosfera tranquila e privativa, longe da agitação urbana, ideal para uma pausa relaxante ou uma celebração em grande estilo.</li>
+                    <li><em>Ambiente Tranquilo: </em>Uma atmosfera tranquila e privativa, longe da agitação urbana, ideal para uma pausa relaxante ou uma celebração em grande estilo.</li>
+
+                    <li><em>Maior Piscina da Região: </em>Possuimos como destaque a maior piscina da região, sendo uma piscina adulto e outra infantil.</li>
                 </ul>
             </div>
 
             <div class="info">
-                <h3>Por que o Recanto Nazareno</h3>
+                <h3>Por que o Recanto Nazareno?</h3>
 
-                <p>Escolher a Chácara Recanto Nazareno é optar por um ambiente que combina o melhor da natureza com conforto e sofisticação. Aqui, cada detalhe é pensado para oferecer a melhor experiência possível, desde o momento da chegada até o final do evento.  </p>
+                <p>Escolher a Chácara Recanto Nazareno é optar por um ambiente que combina o melhor da natureza com conforto e sofisticação. Aqui, cada detalhe é pensado para oferecer a melhor experiência possível, desde o momento da chegada até o final do evento. </p>
 
                 <p>Seja para um evento íntimo ou uma grande celebração, a Chácara Recanto Nazareno é o local ideal para criar memórias inesquecíveis. Entre em contato conosco para saber mais sobre nossos serviços e como podemos tornar seu evento especial.</p>
             </div>
         </section>
 
-        <section class="gallery-images">
+        <section class="installation" id="instalacao">
+            <div class="info-installation">
+                <h3>Instalação</h3>
+            </div>
+
+            <div class="info-installation">
+                <p>Confira a lista de itens em nossa instalação:</p>
+                <ul class="list">
+                    <li>Salão de festas coberto</li>
+                    <li>Piscinas adulto e infantil</li>
+                    <li>Churrasqueira</li>
+                    <li>Bancadas de preparo de alimentos</li>
+                    <li>Fogões cooktop e industrial</li>
+                    <li>Geladeira</li>
+                    <li>Tomadas 110V e 220V</li>
+                    <li>Caixa de som</li>
+                    <li>Wi-fi</li>
+                    <li>Banheiros masculinos e femininos com chuveiro</li>
+                    <li>Chuveiro ao ar-livre</li>
+                    <li>Área para estacionamento de veículos interna</li>
+                    <li>Ampla área para brinquedos, painéis e outras atividades ao ar livre</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="gallery-images" id="galeria">
 
             <div class="title-images">
                 <h3>Área Externa</h3>
@@ -124,7 +166,7 @@
 
             <div class="gallery fotos">
                 <?php
-                $quantidade_imagens =  range(1, 40);
+                $quantidade_imagens =  range(1, 39);
 
                 foreach ($quantidade_imagens as $numero) {
                     echo '
@@ -133,6 +175,7 @@
 
                             <!-- Preview -->
                             <img src="assets/images/gallery/External/' . $numero . '.avif" alt="' . $numero . '">
+                            
                         </a>
                     ';
                 }
@@ -172,8 +215,8 @@
             <form action="" method="post">
                 <div class="container-form">
                     <div class="informations">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
                     </div>
 
                     <div class="informations">
@@ -192,8 +235,7 @@
                     </div>
 
                     <div class="informations">
-                        <label for="
-                        celular">Celular</label>
+                        <label for="celular">Celular</label>
                         <input type="tel" name="celular" id="celular" placeholder="(11) 91234-5678" required>
                     </div>
 
@@ -206,11 +248,59 @@
     </main>
 
     <footer>
+
+        <section class="location">
+            <div class="mapa">
+                <div class="title-location">
+                    <h2>Localização</h2>
+                    <address>Rua Antônio Moreira, 145 - Jardim São Sebastião, Ferraz de Vasconcelos - SP, 08514-350</address>
+                </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.939137955068!2d-46.37257932534193!3d-23.570629261931465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6fe9ff490431%3A0xb219426c7d73f900!2sCh%C3%A1cara%20Recanto%20Nazareno!5e0!3m2!1spt-BR!2sbr!4v1725416731167!5m2!1spt-BR!2sbr" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="footer-info">
+            <div class="title-info">
+                <h3>Siga-nos nas redes sociais!</h3>
+            </div>
+
+            <div class="socialmedia">
+
+                <a href="https://instagram.com/" title="Seguir no Instagram" target="_blank">
+                    <img src="assets/icons/instagram.svg" alt="Ícone do Instagram" id="instagram">
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://facebook.com/" title="Seguir no Facebook" target="_blank">
+                    <img src="assets/icons/facebook.svg" alt="Ícone do Facebook" id="facebook">
+                    <span>Faceboook</span>
+                </a>
+
+                <a href="https://tiktok.com/" title="Seguir no TikTok" target="_blank">
+                    <img src="assets/icons/tiktok-svgrepo-com.svg" alt="Ícone do TikTok" id="tiktok">
+                    <span>TikTok</span>
+                </a>
+
+                <a href="https://youtube.com/" title="Ver no YouTube" target="_blank">
+                    <img src="assets/icons/youtube-svgrepo-com.svg" alt="Ícone do YouTube" id="youtube">
+                    <span>YouTube</span>
+                </a>
+
+            </div>
+        </section>
+
         <div class="copy">
             <span>Desenvolvido por </span>
             <a href="https://github.com/MarleyS439/" target="_blank"> Marley S. Santos</a>
         </div>
     </footer>
+
+    <div class="whatsapp-icon circle pulse">
+        <a href="https://wa.me/5511996390560" target="_blank">
+            <img src="assets/icons/whatsapp1.png" alt="WhatsApp">
+        </a>
+    </div>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
 

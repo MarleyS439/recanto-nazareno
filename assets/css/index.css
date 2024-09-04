@@ -33,8 +33,8 @@
     .overlay {
         content: "";
         position: absolute;
-        background-color: #00000070;
-        width: 100vw;
+        background-color: #00000080;
+        width: 100%;
         height: 100vh;
     }
 
@@ -68,6 +68,7 @@
         margin: 0px 10px;
         color: var(--preto);
         text-decoration: none;
+        font-size: 1.1rem;
     }
 
     nav ul li a:hover {
@@ -117,7 +118,7 @@
     }
 
     .title h1 {
-        font-size: 48px;
+        font-size: 60px;
     }
 
     /* arrows */
@@ -134,8 +135,8 @@
         display: block;
         width: 1.5vw;
         height: 1.5vw;
-        border-bottom: 5px solid white;
-        border-right: 5px solid white;
+        border-bottom: 5px solid var(--branco);
+        border-right: 5px solid var(--branco);
         transform: rotate(45deg);
         margin: -10px;
         animation: animate 2s infinite;
@@ -171,6 +172,9 @@
 
     .title-form h2 {
         color: var(--branco);
+        border: 1px solid var(--branco);
+        padding: 5px 50px;
+        border-radius: 5px;
     }
 
     .btn {
@@ -189,10 +193,12 @@
 
     .title-images h3 {
         font-size: 24px;
+        padding: 10px 50px;
     }
 
     .gallery-images {
         padding: 5%;
+        margin-top: 0;
     }
 
     .gallery {
@@ -214,8 +220,9 @@
 
     .fotos,
     .fotos2 {
-        margin: 50px 0px;
+        margin: 0px 0px;
     }
+
 
     /* Sobre */
     main .about {
@@ -223,20 +230,200 @@
         margin: 0% 5%;
     }
 
-    .about .info h2, h3 {
-        color: var(--preto);
+    .about .info {
+        margin: 50px 0px;
+    }
+
+    .about .info h2,
+    h3 {
+        color: var(--branco);
         display: flex;
         justify-content: center;
         margin: 30px 0px;
+        font-size: 24px;
+        padding: 5px 35px;
+        background-color: var(--azul-escuro);
+        border-radius: 5px;
     }
 
     .about .info ul {
         margin: 2% 5%;
     }
 
+    .about .info p {
+        font-size: 1.1rem;
+        padding: 0px 20px;
+    }
+
+    .about .info ul li {
+        margin: 20px 0px;
+        font-size: 1.1rem;
+    }
+
+    .welcome {
+        background-image: url(../images/welcome.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: top center;
+        margin: 0% 0%;
+        height: 100vh;
+    }
+
+    .container-welcome {
+        position: relative;
+        top: 30%;
+        z-index: 500;
+    }
+
+    .welcome .container-welcome h2 {
+        color: var(--preto);
+        padding: 25px 0px;
+        color: var(--branco);
+    }
+
+    .container-welcome p {
+        color: var(--branco);
+        font-size: 1.1rem;
+        padding: 0% 15%;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .overlay-welcome {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #00000090;
+        z-index: 10;
+    }
+
+
+    /* Instalação */
+    .installation {
+        padding: 0% 5%;
+        border: 1px px solid bisque;
+        margin: 5% 5% 0% 5% ;
+    }
+
+    .info-installation h2 {
+        color: var(--branco);
+        padding: 10px 50px;
+        background-color: var(--azul-escuro);
+    }
+
+    .info-installation-info {
+        padding: 5%;
+        margin: 5%;
+    }
+
+    .info-installation p {
+        margin: 50px 5%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .list {
+        margin: 2% 20%;
+    }
+
+    .list li {
+        font-size: 1.1rem;
+    }
+
 
 
     /* Footer */
+    footer .footer-info {
+        padding: 5%;
+        background-color: var(--azul-escuro);
+    }
+
+    .footer-info h3 {
+        background-color: transparent;
+        color: var(--branco);
+        border: 1px solid var(--branco);
+        padding: 5px 50px;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socialmedia a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+        margin: 0px 15px;
+        color: var(--branco);
+    }
+
+    .socialmedia a img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: var(--preto);
+    }
+
+    #instagram {
+        background-color: #DD2A7B;
+    }
+
+    #facebook {
+        background-color: #0866FF;
+    }
+
+    #tiktok {
+        background-color: #000000
+    }
+
+    #youtube {
+        background-color: #FF0000;
+    }
+
+    .mapa {
+        display: flex;
+    }
+
+    .location {
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-location {
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+        flex-direction: column;
+    }
+
+    .location address {
+        padding: 2%;
+    }
+
+    .location iframe {
+        border-radius: 5px;
+    }
+
+    .title-location h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--azul-escuro);
+        border: 1px solid var(--azul-escuro);
+        padding: 10px 50px;
+        border-radius: 5px;
+    }
+
     footer .copy {
         padding: 20px 5%;
         display: flex;
@@ -252,5 +439,29 @@
 
     footer .copy a {
         color: var(--branco);
+    }
+
+    /* WhatsApp Icon */
+    .whatsapp-icon {
+        position: fixed;
+        right: 4%;
+        bottom: 4%;
+        z-index: 99;
+        -webkit-animation-name: bounceInDown;
+        animation-name: bounceInDown;
+        -webkit-animation-duration: 2.5s;
+        animation-duration: 2.5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-delay: 1.6s;
+        -webkit-animation-delay: 1.6s;
+        z-index: 5000;
+    }
+
+    .whatsapp-icon img {
+        width: 50px;
+        height: 50px;
+        animation: pulse-animation 2s infinite;
+        border-radius: 50%;
     }
 }
