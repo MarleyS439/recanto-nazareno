@@ -11,7 +11,8 @@
     <!-- HTML Meta Tags -->
     <meta name="author" content="Marley de S. Santos">
     <meta name="description" content="Locação de Espaço com Piscina para Eventos e Confraternizações. Alugue um espaço para seu evento unindo o melhor entre a cidade e o campo.">
-    <meta name="keywords" content="Chácara, Recanto, Nazareno, Chácara Recanto Nazareno, Ferraz de Vasconcelos, Chácara em Ferraz de Vasconcelos, Ferraz, Ferraz de Vasconcelos, Chácara Para Locação Em Ferraz de Vasconcelos, ">
+    <meta name="keywords" content="Chácara, Recanto, Nazareno, Chácara Recanto Nazareno, Ferraz de Vasconcelos, Chácara em Ferraz de Vasconcelos, Ferraz, Ferraz de Vasconcelos, Chácara Para Locação Em Ferraz de Vasconcelos, Eventos, Local para Eventos em Ferraz de Vasconcelos, Alugar Chácara, Piscina, Final de Semana, Local para Passar o Final de Semana, Tomar Sol, Banho de Piscina, Sol, Churrasco, Final de Semana, Alugar Espaço, Chácaras em Ferraz de Vasconcelos, Curtir com a Família, Família, Curtir, Churrasco em Família, Piscina em Ferraz de Vasconcelos">
+    
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 
     <!-- Open Graph Meta Tags -->
