@@ -1,11 +1,9 @@
 $('.fotos').slick({
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    speed: 500,
-    prevArrow: true,
-    nextArrow: true,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 2,
     responsive: [
@@ -24,14 +22,22 @@ $('.fotos').slick({
             breakpoint: 600,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1,
-                prevArrow: true,
-                nextArrow: true,
-
+                slidesToScroll: 2
             }
         },
         {
             breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: true,
+                nextArrow: true,
+                dots: false
+            }
+        },
+
+        {
+            breakpoint: 380,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -44,7 +50,7 @@ $('.fotos').slick({
 });
 
 $('.fotos2').slick({
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -77,6 +83,16 @@ $('.fotos2').slick({
                 slidesToScroll: 1,
                 prevArrow: false,
                 nextArrow: false,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 380,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: true,
+                nextArrow: true,
                 dots: false
             }
         }
