@@ -1,0 +1,5 @@
+# Ignorar o diretório node_modules/
+node_modules/
+
+# Ignorar o arquivo config.ini em config/
+config/config.ini

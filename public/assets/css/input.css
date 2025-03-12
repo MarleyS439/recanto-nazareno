@@ -1,0 +1,10 @@
+/* Font */
+@import url("font.css");
+
+/* Tailwind CSS */
+@import "tailwindcss";
+
+@theme {
+    /* Default-font */
+    --font-alexandria: "Alexandria-Regular", sans-serif;
+}
