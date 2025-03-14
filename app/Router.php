@@ -22,6 +22,7 @@ class Router
      */
     private array $routes = [
         "/" => ["HomeController", "index"],
+        "/budget" => ["HomeController", "requestBudget"],
     ];
 
     /**
