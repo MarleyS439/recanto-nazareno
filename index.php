@@ -19,4 +19,6 @@ require_once __DIR__ . "/vendor/autoload.php";
 
 // Cria uma instância da classe Router
 $router = new Router();
+
+// Chama o método route
 $router->route();

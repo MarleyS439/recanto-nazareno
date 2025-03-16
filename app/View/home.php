@@ -142,6 +142,60 @@ $answers = [
         <!-- PhotoSphere JS Viewer -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
 
+        <script>
+          // Define dataLayer and the gtag function.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+
+          // Set default consent to 'denied' as a placeholder
+          // Determine actual values based on your own requirements
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+          });
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Create one update function for each consent parameter -->
+        <script>
+          function consentGrantedAdStorage() {
+            gtag('consent', 'update', {
+              'ad_storage': 'granted'
+            });
+          }
+        </script>
+
+        <!-- GLightbox -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+        <!-- Slick CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+        <!-- Custom Slick CSS -->
+        <style>
+            .slick-prev, .slick-next {
+                background-color: #0069a8;
+                width: 38px;
+                height: 38px;
+                border-radius: 5px;
+                z-index: 1000;
+            }
+
+            .slick-prev:hover, .slick-next:hover {
+                background-color: #0069a895;
+            }
+        </style>
+
         <!-- Title -->
         <title><?= htmlspecialchars($title) ?></title>
     </head>
@@ -231,33 +285,47 @@ $answers = [
                 </div>
             </section>
 
-            <div id="instalação"></div>
-
-            <!-- Instalation -->
             <section class="lg:mx-16 rounded z-10 lg:py-8 text-stone-800 h-screen">
+                <div class="lg:flex lg:justify-center">
+                    <div class="card border">
+                        <div class="">
+                            <span>Festas</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="galeria"></div>
+
+            <!-- Galeria -->
+            <section class="rounded z-10 lg:py-8 text-stone-800 w-full">
                 <div class="lg:my-6 lg:flex lg:justify-center w-full">
-                    <h4 class="lg:p-4 lg:my-3 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Instalação</h4>
+                    <h4 class="lg:p-4 lg:my-3 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">
+                        Galeria de Fotos
+                    </h4>
                 </div>
 
-                <div class="lg:flex lg:justify-between lg:px-4">
-                    <div class="lg:w-[45vw]">
-                        <p class="font-bold text-xl text-stone-800">Escolher a Chácara Recanto Nazareno é optar por um ambiente que combina o melhor da natureza com o conforto e sofisticação. Aqui cada detalhe é pensado para oferecer a melhor experiência possível. Desde a sua chegada até o final do evento.</p>
+                <div class="w-full">
+                    <!-- Carrossel Slick -->
+                    <div class="fotos slick-carousel lg:mx-20">
+                        <?php
+                        $quantidade_imagens = range(1, 53); // Ajuste a quantidade de imagens
+                        foreach ($quantidade_imagens as $numero): ?>
+                            <div>
+                                <a href="<?= htmlspecialchars(
+                                    $assets["images"]
+                                ) ?>gallery/<?= $numero ?>.avif"
+                                    class="glightbox block w-full">
+                                    <img src="<?= htmlspecialchars(
+                                        $assets["images"]
+                                    ) ?>gallery/<?= $numero ?>.avif"
+                                            alt="Imagem <?= $numero ?>"
+                                            class="w-[90%] lg:mx-2 h-40 lg:h-full object-cover rounded shadow-md">
+                                </a>
+                            </div>
+                        <?php endforeach;
+                        ?>
                     </div>
-
-                    <ul class="lg:px-6 lg:w-[45vw]">
-                        <li class="list-disc">Salão de Festas Coberto</li>
-                        <li class="list-disc">Ampla piscina adulto e piscina infantil</li>
-                        <li class="list-disc">Churrasqueira</li>
-                        <li class="list-disc">Bancadas para preparação de alimentos</li>
-                        <li class="list-disc">Fogão cooktop e industrial</li>
-                        <li class="list-disc">Geladeira e freezers</li>
-                        <li class="list-disc">Tomadas de 110V e 220V</li>
-                        <li class="list-disc">Wifi para os convidados</li>
-                        <li class="list-disc">Banheiros masculinos e femininos com chuveiro</li>
-                        <li class="list-disc">Chuveiro ao ar-livre</li>
-                        <li class="list-disc">Estacionamento interno para veículo</li>
-                        <li class="list-disc">Ampla área para brinquedos, painéis, mesas, cadeiras e outras atividades ao ar-livre</li>
-                    </ul>
                 </div>
             </section>
 
@@ -274,13 +342,13 @@ $answers = [
             </div>
 
             <!-- FAQ -->
-            <section class="lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16">
+            <section class="lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
 
                 <div class="lg:my-6 lg:flex lg:justify-center">
                     <h4 class="lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Perguntas Frequentes</h4>
                 </div>
 
-                <div class="lg:p-2 w-full">
+                <div class="lg:p-2 w-full lg:px-28">
                     <?php if (count($questions) === count($answers)) {
                         for ($i = 0; $i < count($questions); $i++) {
                             echo '
@@ -309,12 +377,12 @@ $answers = [
             </section>
 
             <!-- Google Calendar -->
-            <section class="">
-                <div class="lg:flex lg:justify-center">
-                    <h4 class="text-4xl bg-sky-700 font-bold lg:px-10 lg:py-4 rounded text-zinc-100">Que tal conhecer de perto? Agende uma visita</h4>
+            <section class="lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
+                <div class="lg:my-6 lg:flex lg:justify-center">
+                    <h4 class="lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Faça uma visita e conheça mais!</h4>
                 </div>
 
-                <div class="lg:flex lg:justify-center lg:my-8 text-stone-800">
+                <div class="lg:flex lg:justify-center lg:my-8 text-stone-800 items-center lg:py-8">
                     <!-- Google Calendar Appointment Scheduling begin -->
                     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
                     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -322,10 +390,11 @@ $answers = [
                     (function() {
                       var target = document.currentScript;
                       window.addEventListener('load', function() {
+
                         calendar.schedulingButton.load({
                           url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0HY4syPCOU4scdvYUDfoax8Q8yOvG7uPDO3BiTMgkXZPcun8RmuWCfiXaJKSZjuuIyHwLPuNjh?gv=true',
                           color: '#0069a8',
-                          label: 'Clique aqui para agendar uma visita',
+                          label: 'CLIQUE AQUI PARA AGENDAR VISITA',
                           target,
                         });
                       });
@@ -340,7 +409,7 @@ $answers = [
 
 
             <!-- Contact -->
-            <section class="lg:px-8 lg:py-4 lg:mx-16 rounded lg:my-16 flex justify-between items-center bg-sky-700">
+            <section class="lg:px-16 lg:py-4 lg:mx-16 rounded lg:my-16 flex justify-between items-center bg-sky-700">
 
                 <div class="lg:mx-2">
                     <h4 class="font-bold text-zinc-100 text-4xl">Quer mais informações?<h4>
@@ -349,19 +418,19 @@ $answers = [
                 </div>
 
                 <!-- Contact Form -->
-                <form class="lg:px-2 lg:py-4 w-[30vw] lg:flex lg:flex-col" action="budget" method="POST" id="">
+                <form class="lg:px-4 lg:py-4 w-[30vw] lg:flex lg:flex-col" action="budget" method="POST" id="">
                     <div class="lg:my-2">
                         <h4 class="font-bold text-zinc-100 text-3xl">Solicite um orçamento</h4>
                     </div>
 
                     <div class="lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="name">Nome</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="name" id="name" placeholder="Digite seu nome">
+                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="name" id="name" placeholder="Digite seu nome" autocomplete="name">
                     </div>
 
                     <div class="lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="phone">Celular</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="phone" id="celular" placeholder="(DDD) 9XXXX-XXXX">
+                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="phone" id="phone" placeholder="(DDD) 9XXXX-XXXX" autocomplete="phone">
                     </div>
 
                     <div class="lg:flex lg:flex-col lg:my-1">
@@ -405,57 +474,93 @@ $answers = [
         </main>
 
         <!-- Footer -->
-        <footer class="bg-sky-800 lg:px-8">
+        <footer class="bg-sky-800 lg:px-10 lg:flex lg:flex-col lg:py-5 lg:w-full">
 
-            <!-- Social -->
-            <div class="lg:flex justify-start p-2 lg:flex-col lg:mx-6">
+            <div class="grid grid-cols-3 gap-2">
+                <!-- Social -->
+                <div class="lg:flex lg:flex-col lg:p-8">
 
-                <div class="lg:my-4">
-                    <h4 class="py-2 text-zinc-200 font-bold text-xl">Siga-nos nas redes sociais</h4>
+                    <div class="lg:my-4">
+                        <h4 class="py-2 text-zinc-200 font-bold text-xl">Siga-nos nas redes sociais</h4>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="lg:flex">
+
+                        <!-- Instagram -->
+                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://instagram.com/" target="_blank" title="Instagram">
+                            <img class="w-6" src="<?= htmlspecialchars(
+                                $assets["icons"]
+                            ) ?>Instagram.svg" alt="Instagram">
+                        </a>
+
+                        <!-- Facebook -->
+                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://facebook.com/" target="_blank" title="Facebook">
+                            <img class="w-6" src="<?= htmlspecialchars(
+                                $assets["icons"]
+                            ) ?>Facebook.svg" alt="Facebook">
+                        </a>
+
+                        <!-- TikTok -->
+                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://tiktok.com/" target="_blank" title="TikTok">
+                            <img class="w-6" src="<?= htmlspecialchars(
+                                $assets["icons"]
+                            ) ?>TikTok.svg" alt="TikTok">
+                        </a>
+
+                        <!-- YouTube -->
+                        <a class="bg-zinc-100 rounded-full p-2" href="https://youtube.com/" target="_blank" title="YouTube">
+                            <img class="w-6" src="<?= htmlspecialchars(
+                                $assets["icons"]
+                            ) ?>YouTube.svg" alt="YouTube">
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Social Links -->
-                <div class="lg:flex">
+                <!-- Contact -->
+                <div class="lg:flex lg:flex-col lg:p-8">
+                    <div class="lg:my-4">
+                        <h4 class="py-2 text-zinc-200 font-bold text-xl">Contato</h4>
+                    </div>
 
-                    <!-- Instagram -->
-                    <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://instagram.com/" target="_blank" title="Instagram">
-                        <img class="w-6" src="<?= htmlspecialchars(
-                            $assets["icons"]
-                        ) ?>Instagram.svg" alt="Instagram">
-                    </a>
+                    <div class="lg:flex lg:flex-col">
+                        <span class="text-zinc-100 font-bold my-1">E-mail: <a class="text-zinc-100 font-normal underline" href="mailto:contato@recantonazareno.com.br" title="Envie um e-mail">contato@recantonazareno.com.br</a></span>
+                        <span class="text-zinc-100 font-bold my-1">WhatsApp: <a class="text-zinc-100 font-normal underline" href="https://wa.me/+551136180643" title="Chamar no WhatsApp Business">(11) 93618-0643</a></span>
+                    </div>
+                </div>
 
-                    <!-- Facebook -->
-                    <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://facebook.com/" target="_blank" title="Facebook">
-                        <img class="w-6" src="<?= htmlspecialchars(
-                            $assets["icons"]
-                        ) ?>Facebook.svg" alt="Facebook">
-                    </a>
+                <!-- About -->
+                <div class="lg:flex lg:flex-col lg:p-8">
+                    <div class="lg:my-4">
+                        <h4 class="py-2 text-zinc-200 font-bold text-xl">Sobre</h4>
+                    </div>
 
-                    <!-- TikTok -->
-                    <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://tiktok.com/" target="_blank" title="TikTok">
-                        <img class="w-6" src="<?= htmlspecialchars(
-                            $assets["icons"]
-                        ) ?>TikTok.svg" alt="TikTok">
-                    </a>
-
-                    <!-- YouTube -->
-                    <a class="bg-zinc-100 rounded-full p-2" href="https://youtube.com/" target="_blank" title="YouTube">
-                        <img class="w-6" src="<?= htmlspecialchars(
-                            $assets["icons"]
-                        ) ?>YouTube.svg" alt="YouTube">
-                    </a>
+                    <div class="lg:flex lg:flex-col">
+                        <p class="text-zinc-100">Recanto Nazareno é uma chácara com espaço para eventos e festas com piscina.</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Copyright -->
-            <div class="lg:p-5 lg:flex lg:justify-end font-medium text-zinc-300">© 2025 Chácara Recanto Nazareno. Todos os Direitos Reservados. Desenvolvido por <a class="mx-1 underline text-zinc-300" href="https://github.com/MarleyS439/" target="_blank">Marley Santos</a></div>
         </footer>
+
+        <!-- Copyright -->
+        <div class="bg-sky-800 lg:p-5 lg:flex lg:justify-center font-medium text-zinc-300">© 2025 Chácara Recanto Nazareno. Todos os Direitos Reservados. Desenvolvido por <a class="mx-1 underline text-zinc-300" href="https://github.com/MarleyS439/" target="_blank">Marley Santos</a></div>
 
         <!-- WhatsApp -->
         <div class="right-16 bottom-16 fixed z-[10000] cursor-pointer">
             <img class="w-14 pointer-events-none" src="<?= htmlspecialchars(
                 $assets["icons"]
             ) ?>WhatsApp.png" alt="WhatsApp">
+        </div>
+
+        <!-- Cookies -->
+        <div class="fixed bottom-10 z-[1000] bg-white/95 backdrop-blur-md grid place-items-center p-4 shadow-xl shadow-black/20 rounded w-1/2" id="cookies">
+            <div class="w-full">
+                <p class="text-left">Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a class="text-sky-700" href="cookies">Política de Cookies.</a></p>
+                <div class="flex justify-end lg:p-2">
+                    <button class="bg-sky-700 text-white p-2 px-8 rounded hover:bg-sky-800" type="button" aria-label="Permitir cookies" id="permited" onclick="consentGrantedAdStorage()">Permitir</button>
+                    <button class="border border-sky-700 text-sky-700 p-2 px-8 rounded hover:bg-gray-200 ml-2" type="button" aria-label="Recusar cookies" id="recused">Recusar</button>
+                </div>
+            </div>
         </div>
 
         <!-- Import Map - Photo Sphere -->
@@ -501,23 +606,53 @@ $answers = [
 
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-
+        <!-- GLightbox -->
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <!-- Slick JS -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <!-- Phone Number -->
         <script>
           (function () {
             $(document).ready(function () {
-              $("#celular").on("input", function () {
+
+              // Iniciar GLightbox
+              const lightbox = GLightbox({ selector: '.glightbox' });
+
+              // Slick JS
+              $('.slick-carousel').slick({
+                  slidesToShow: 3, // Número de imagens visíveis
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                  arrows: true,
+                  dots: false,
+                  infinite: true,
+                  responsive: [
+                      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                      { breakpoint: 768, settings: { slidesToShow: 1 } }
+                  ]
+              });
+
+              // Cookies
+              let cookies = $("#cookies");
+              $("#permited").click(function () {
+                cookies.hide();
+              });
+              $("#recused").click(function () {
+                cookies.hide();
+              });
 
               // Phone Number Formatter
+              $("#celular").on("input", function () {
               var input = $(this).val().replace(/\D/g, "");
-              if (input.length > 0) {
-                input = input.match(/^(\d{0,2})(\d{0,5})(\d{0,4})$/);
-                $(this).val(function () {
-                  return !input[2]
-                    ? input[1]
-                    : "(" + input[1] + ") " + input[2] + (input[3] ? "-" + input[3] : "");
-                });
-              }
+                if (input.length > 0) {
+                  input = input.match(/^(\d{0,2})(\d{0,5})(\d{0,4})$/);
+                  $(this).val(function () {
+                    return !input[2]
+                      ? input[1]
+                      : "(" + input[1] + ") " + input[2] + (input[3] ? "-" + input[3] : "");
+                  });
+                }
               });
             });
           }) ();
