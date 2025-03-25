@@ -1,19 +1,15 @@
 <?php
 
-// Declaração de tipagem forte
 declare(strict_types=1);
 
-// Declaração do namespace
 namespace App;
 
-// Importa a classe ErrorController
 use Controller\ErrorController;
 
 /**
  * Classe responsável pelas rotas de controladores da aplicação
  *
- * @package App
- * @author @MarleyS439
+ * @author Marley de S. Santos (MarleyS439) <marleysantos439@gmail.com>
  */
 class Router
 {
@@ -27,6 +23,8 @@ class Router
 
     /**
      * Método acessar os controladores de cada rota
+     *
+     * @author Marley de S. Santos (MarleyS439) <marleysantos439@gmail.com>
      *
      * @param void
      * @return void
@@ -63,6 +61,8 @@ class Router
 
     /**
      * Método para lidar com erros
+     *
+     * @author Marley de S. Santos (MarleyS439) <marleysantos439@gmail.com>
      *
      * @param void
      * @return void

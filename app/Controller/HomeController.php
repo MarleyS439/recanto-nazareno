@@ -40,7 +40,7 @@ class HomeController
         $name = $_POST["name"] ?? "";
         $phone = $_POST["phone"] ?? "";
         $email = $_POST["email"] ?? "";
-        $date = $_POST["date"] ?? null;
+        $date_selected = $_POST["date"] ?? null;
         $participants = $_POST["participants"] ?? null;
         $eventType = $_POST["eventType"] ?? "";
 
@@ -49,7 +49,7 @@ class HomeController
             empty($name) &&
             empty($phone) &&
             empty($email) &&
-            empty($date) &&
+            empty($date_selected) &&
             empty($participants) &&
             empty($eventType)
         ) {
@@ -58,11 +58,11 @@ class HomeController
         }
 
         // Cria um objeto de Data e Hora
-        $date = new DateTime();
+        $date = new DateTime($date_selected);
         $dateFormatted = $date->format("d/m/Y");
 
         // Mensagem
-        $message = "Olá!\n\nMeu nome é $name. \n\nGostaria de mais informações para a locação da Chácara Recanto Nazareno para oas seguintes informações: \n\nData: $dateFormatted\nQuantidade de convidados: $participants\nTipo do evento: $eventType\nMeu contato: $phone\n Meu e-mail: $email";
+        $message = "Olá!\n\nMeu nome é $name. \n\nGostaria de mais informações para a locação da Chácara Recanto Nazareno para oas seguintes informações: \n\nData: $dateFormatted\nQuantidade de convidados: $participants\nTipo do evento: $eventType\nMeu contato: $phone\nMeu e-mail: $email";
 
         // Codifica a mensagem para a URL
         $encodeMessage = urlencode($message);

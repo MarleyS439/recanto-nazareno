@@ -1,9 +1,7 @@
 <?php
 
-// Declaração de tipagem forte
 declare(strict_types=1);
 
-// Declaração do namespace
 namespace App\View;
 
 // Carrega alguns dados do arquivo config.ini
@@ -69,9 +67,11 @@ $keywords = [
     "Contato com a Natureza",
     "Espaço Kids",
     "Turismo",
+    "Eventos Religiosos",
 ];
 
 $title = "Chácara Recanto Nazareno | Espaço para Eventos e Confraternizações";
+
 $description =
     "Locação de Espaço com Piscina para Eventos e Confraternizações. Alugue um espaço para seu evento unindo o melhor entre a cidade e o campo.";
 
@@ -104,13 +104,13 @@ $answers = [
 
 <!DOCTYPE html>
 
-<html lang="pt-br" dir="ltr" class="scroll-smooth">
+<html lang="pt-br" dir="ltr" class="scroll-smooth m-0">
     <head>
         <!-- HTML Meta Tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="marley de S. Santos">
-        <meta name="description" content="">
+        <meta name="description" content="Locação de Espaço com Piscina para Eventos e Confraternizações. Alugue um espaço para seu evento unindo o melhor entre a cidade e o campo.">
         <meta name="keywords" content="<?= htmlspecialchars(
             implode(", ", $keywords)
         ) ?>">
@@ -122,7 +122,9 @@ $answers = [
         <meta property="og:description" content="<?= htmlspecialchars(
             $description
         ) ?>">
-        <meta property="og:image" content="<?= htmlspecialchars($appURL) ?>">
+        <meta property="og:image" content="<?= htmlspecialchars(
+            $appURL
+        ) ?>/public/assets/images/banner.png">
         <meta property="og:site_name" content="<?= htmlspecialchars(
             $appName
         ) ?>">
@@ -142,6 +144,7 @@ $answers = [
         <!-- PhotoSphere JS Viewer -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
 
+        <!-- Google Cookies -->
         <script>
           // Define dataLayer and the gtag function.
           window.dataLayer = window.dataLayer || [];
@@ -155,6 +158,16 @@ $answers = [
             'ad_personalization': 'denied',
             'analytics_storage': 'denied'
           });
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EYXFZG7XQ"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-7EYXFZG7XQ');
         </script>
 
         <!-- Google Tag Manager -->
@@ -183,17 +196,7 @@ $answers = [
 
         <!-- Custom Slick CSS -->
         <style>
-            .slick-prev, .slick-next {
-                background-color: #0069a8;
-                width: 38px;
-                height: 38px;
-                border-radius: 5px;
-                z-index: 1000;
-            }
-
-            .slick-prev:hover, .slick-next:hover {
-                background-color: #0069a895;
-            }
+            @media screen and (min-width: 1024px) {.slick-prev,.slick-next{width:50px;height: 50px;border-radius:5px;z-index: 500;}.slick-prev::before,.slick-next::before {background-color:#fdc700;}.slick-arrow{width:50px;height:50px;border:4px solid #fdc700;background-color:#fdc700;}.slick-arrow::before{background-color:#fdc700;padding:13px;border-radius:4px}}
         </style>
 
         <!-- Title -->
@@ -202,36 +205,35 @@ $answers = [
 
     <body>
         <!-- Header -->
-        <header class="lg:h-screen bg-center bg-cover" style="background-image: url(<?= htmlspecialchars(
+        <header class="h-screen bg-center bg-cover lg:h-screen" style="background-image: url(<?= htmlspecialchars(
             $assets["images"]
         ) ?>Header.avif)" id="início">
-            <nav class="lg:w-full flex justify-between lg:px-16 bg-white/95 backdrop-blur-lg fixed z-[1000] shadow-lg">
+            <nav class="w-full flex px-2 justify-between bg-white/95 backdrop-blur-lg fixed z-[1000] shadow-lg lg:w-full lg:px-16 ">
                 <a class="p-2 flex items-center" href="">
                     <img class="!w-12 rounded-full border border-yellow-400" src="<?= htmlspecialchars(
                         $assets["images"]
                     ) ?>logo.png" alt="Logo Chácara Recanto Nazareno">
-                    <span class="mx-1 font-bold text-stone-800">Chácara Recanto Nazareno</span>
+                    <span class="text-sm lg:text-base lg:flex lg:flex-row mx-1 font-bold text-stone-800">Chácara Recanto Nazareno</span>
                 </a>
 
                 <!-- Navigation -->
                 <div class="flex justify-center items-center">
-                        <a href="#início" class="relative lg:mx-3 text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Início</a>
-                        <a href="#sobre" class="relative lg:mx-3 text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Sobre</a>
-                        <a href="#instalação" class="relative lg:mx-3 text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Instalação</a>
-                        <a href="#agendar" class="relative lg:mx-3 text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Visitar</a>
-                        <a href="#galeria" class="relative lg:mx-3 text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Galeria de fotos</a>
-                        <a href="#faq" class="relative lg:mx-3 text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">FAQ</a>
+                        <a href="#início" class="hidden relative text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 lg:mx-3 lg:flex lg:flex-col">Início</a>
+                        <a href="#sobre" class="hidden relative text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 lg:mx-3 lg:flex lg:flex-col">Sobre</a>
+                        <a href="#galeria" class="hidden relative text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 lg:mx-3 lg:flex lg:flex-col">Galeria de fotos</a>
+                        <a href="#agendar" class="hidden relative text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 lg:mx-3 lg:flex lg:flex-col">Visitar</a>
+                        <a href="#faq" class="hidden relative text-stone-800 transition-all duration-150 hover:text-sky-950 after:block after:w-full after:h-[2px] after:bg-sky-950 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 lg:mx-3 lg:flex lg:flex-col">FAQ</a>
                     <div class="lg:mx-2">
-                        <a href="#form" class="font-medium rounded flex justify-center items-center lg:p-2 bg-yellow-400 lg:px-6 lg:mx-2 text-stone-700 transition duration-200 ease-in-out active:scale-90 active:shadow-inner">Orçamento</a>
+                        <a href="#form" class="p-2 px-4 font-medium rounded flex justify-center items-center lg:p-2 bg-yellow-400 lg:px-6 lg:mx-2 text-stone-700 transition duration-200 ease-in-out active:scale-90 active:shadow-inner">Orçamento</a>
                     </div>
                 </div>
             </nav>
 
             <!-- Header content -->
-            <div class="lg:flex lg:justify-center relative top-50">
-                <div class="lg:flex lg:justify-center lg:flex-col top-10">
-                    <h1 class="text-6xl font-bold lg:my-2 lg:flex lg:justify-center text-zinc-100">Recanto Nazareno</h1>
-                    <h2 class="lg:my-2 font-bold lg:flex lg:justify-center text-zinc-100 text-3xl">Onde cada momento, se torna uma lembrança inesquecível</h2>
+            <div class="flex justify-center lg:flex lg:justify-center relative lg:top-50 top-60">
+                <div class="flex justify-center flex-col items-center lg:flex lg:justify-center lg:flex-col top-10">
+                    <h1 class="text-center my-2 text-6xl lg:text-6xl font-bold lg:my-2 lg:flex lg:justify-center text-zinc-100">Recanto Nazareno</h1>
+                    <h2 class="text-center my-2 text-2xl lg:my-2 font-bold lg:flex lg:justify-center text-zinc-100 lg:text-3xl">Onde cada momento, se torna uma lembrança inesquecível</h2>
                 </div>
             </div>
         </header>
@@ -242,21 +244,21 @@ $answers = [
         <main>
 
             <!-- Information -->
-            <section class="lg:px-6 lg:py-6 lg:mx-10 lg:my-16">
-                <div class="lg:flex lg:justify-between">
+            <section class="my-8 lg:px-6 lg:py-6 lg:mx-10 lg:my-16">
+                <div class="flex flex-col-reverse lg:flex lg:flex-row lg:items-center lg:justify-between">
                     <div class="lg:flex lg:flex-col lg:py-8">
-                        <div class="">
-                            <h3 class="uppercase text-2xl font-bold underline">Um inscrível espaço aconchegante</h3>
+                        <div class="flex justify-center my-4 mx-6">
+                            <h3 class="uppercase text-3xl text-center font-bold underline flex justify-center">Um inscrível espaço aconchegante</h3>
                         </div>
 
-                        <div class="w-[45vw]">
-                            <p class="lg:py-6 text-base leading-8">O espaço da Recanto Nazareno é uma generosa extensão de verde que te recebe com amplitude e aconchego, garantindo uma privacidade incomparável.  Aqui, você não se sente confinado, mas sim livre para explorar cada canto dos nossos amplos espaços ao ar livre, repletos de vegetação exuberante e convidativos recantos de sombra.  A privacidade é um dos nossos maiores tesouros, permitindo que você e seus acompanhantes desfrutem de momentos de total exclusividade e tranquilidade, longe do olhar curioso e do barulho da cidade.</p>
+                        <div class="w-full lg:w-[45vw]">
+                            <p class="px-6 lg:py-6 text-base leading-8">O espaço da Recanto Nazareno é uma generosa extensão de verde que te recebe com amplitude e aconchego, garantindo uma privacidade incomparável.  Aqui, você não se sente confinado, mas sim livre para explorar cada canto dos nossos amplos espaços ao ar livre, repletos de vegetação exuberante e convidativos recantos de sombra.  A privacidade é um dos nossos maiores tesouros, permitindo que você e seus acompanhantes desfrutem de momentos de total exclusividade e tranquilidade, longe do olhar curioso e do barulho da cidade.</p>
                         </div>
                     </div>
 
                     <!-- Image Information -->
-                    <div class="pointer-events-none">
-                        <img class="rounded-sm w-[40vw]" src="<?= htmlspecialchars(
+                    <div class="pointer-events-none mx-6">
+                        <img class="rounded-sm w-full lg:w-[40vw]" src="<?= htmlspecialchars(
                             $assets["images"]
                         ) ?>Image1.avif" alt="">
                     </div>
@@ -264,33 +266,23 @@ $answers = [
             </section>
 
             <!-- Information -->
-            <section class="lg:px-6 lg:py-6 lg:mx-10 lg:my-16">
-                <div class="lg:flex lg:justify-between flex-row-reverse">
+            <section class="my-8 lg:px-6 lg:py-6 lg:mx-10 lg:my-16">
+                <div class="flex flex-col-reverse lg:flex lg:justify-between lg:flex-row-reverse">
                     <div class="lg:flex lg:flex-col lg:py-8">
-                        <div class="">
-                            <h3 class="uppercase text-2xl font-bold underline">Celebre Momentos Inesquecíveis</h3>
+                        <div class="flex justify-center my-4 mx-6">
+                            <h3 class="uppercase text-3xl text-center font-bold underline">Celebre Momentos Inesquecíveis</h3>
                         </div>
 
-                        <div class="w-[45vw]">
-                            <p class="lg:py-6 text-base leading-8">No Recanto Nazareno, cada evento se transforma em uma experiência única. Com uma estrutura cuidadosamente planejada, oferecemos um ambiente ideal para comemorações especiais, onde cada detalhe é pensado para proporcionar conforto e bem-estar. Seja para festas, reuniões ou eventos familiares, nosso espaço combina elegância e funcionalidade, garantindo que cada momento seja celebrado com alegria e praticidade. Aqui, sua festa ganha vida em um cenário harmonioso e acolhedor, perfeito para criar memórias inesquecíveis.</p>
+                        <div class="w-full lg:w-[45vw]">
+                            <p class="px-6 lg:py-6 text-base leading-8">No Recanto Nazareno, cada evento se transforma em uma experiência única. Com uma estrutura cuidadosamente planejada, oferecemos um ambiente ideal para comemorações especiais, onde cada detalhe é pensado para proporcionar conforto e bem-estar. Seja para festas, reuniões ou eventos familiares, nosso espaço combina elegância e funcionalidade, garantindo que cada momento seja celebrado com alegria e praticidade. Aqui, sua festa ganha vida em um cenário harmonioso e acolhedor, perfeito para criar memórias inesquecíveis.</p>
                         </div>
                     </div>
 
                     <!-- Image Information -->
-                    <div class="pointer-events-none">
-                        <img class="rounded-sm w-[40vw]" src="<?= htmlspecialchars(
+                    <div class="pointer-events-none mx-6">
+                        <img class="rounded-sm w-full lg:w-[40vw]" src="<?= htmlspecialchars(
                             $assets["images"]
                         ) ?>Image2.avif" alt="">
-                    </div>
-                </div>
-            </section>
-
-            <section class="lg:mx-16 rounded z-10 lg:py-8 text-stone-800 h-screen">
-                <div class="lg:flex lg:justify-center">
-                    <div class="card border">
-                        <div class="">
-                            <span>Festas</span>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -298,20 +290,20 @@ $answers = [
             <div id="galeria"></div>
 
             <!-- Galeria -->
-            <section class="rounded z-10 lg:py-8 text-stone-800 w-full">
-                <div class="lg:my-6 lg:flex lg:justify-center w-full">
-                    <h4 class="lg:p-4 lg:my-3 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">
+            <section class="rounded z-10 my-2 lg:py-8 text-stone-800 lg:w-full">
+                <div class="mx-4 lg:my-6 lg:flex lg:justify-center lg:mx-16">
+                    <h4 class="p-2 lg:p-4 lg:my-3 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">
                         Galeria de Fotos
                     </h4>
                 </div>
 
-                <div class="w-full">
+                <div class="w-full bg-sky-600">
                     <!-- Carrossel Slick -->
-                    <div class="fotos slick-carousel lg:mx-20">
+                    <div class="fotos slick-carousel mx-8 lg:mx-16 my-2 rounded flex items-center">
                         <?php
-                        $quantidade_imagens = range(1, 53); // Ajuste a quantidade de imagens
+                        $quantidade_imagens = range(1, 53);
                         foreach ($quantidade_imagens as $numero): ?>
-                            <div>
+                            <div class="flex m-2">
                                 <a href="<?= htmlspecialchars(
                                     $assets["images"]
                                 ) ?>gallery/<?= $numero ?>.avif"
@@ -320,7 +312,7 @@ $answers = [
                                         $assets["images"]
                                     ) ?>gallery/<?= $numero ?>.avif"
                                             alt="Imagem <?= $numero ?>"
-                                            class="w-[90%] lg:mx-2 h-40 lg:h-full object-cover rounded shadow-md">
+                                            class="w-[100%] h-70 lg:h-full object-cover rounded shadow-md">
                                 </a>
                             </div>
                         <?php endforeach;
@@ -330,9 +322,9 @@ $answers = [
             </section>
 
             <!-- PhotoSphere -->
-            <div class="lg:mx-16 rounded z-10 lg:py-6">
+            <div class="mx-4 lg:mx-16 rounded z-10 lg:py-6">
                 <div class="lg:my-6 lg:flex lg:justify-center">
-                    <h4 class="lg:p-4 lg:my-3 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Uma perspectiva única deste lugar especial</h4>
+                    <h4 class="my-4 text-4xl p-2 lg:p-4 lg:my-3 font-bold lg:text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Uma perspectiva única deste lugar especial</h4>
                 </div>
 
                 <!-- Container viewer -->
@@ -342,20 +334,20 @@ $answers = [
             </div>
 
             <!-- FAQ -->
-            <section class="lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
+            <section class="mx-4 my-8 lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
 
                 <div class="lg:my-6 lg:flex lg:justify-center">
-                    <h4 class="lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Perguntas Frequentes</h4>
+                    <h4 class="p-2 lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Perguntas Frequentes (FAQ)</h4>
                 </div>
 
-                <div class="lg:p-2 w-full lg:px-28">
+                <div class="my-4 lg:p-2 w-full lg:px-28">
                     <?php if (count($questions) === count($answers)) {
                         for ($i = 0; $i < count($questions); $i++) {
                             echo '
-                                <div class="w-full border-b border-b-stone-800 lg:my-2 lg:px-2" title="Expandir/Recolher">
+                                <div class="m-2 lg:w-full border-b border-b-stone-800 lg:my-2 lg:px-2" title="Expandir/Recolher">
                                     <!-- Pergunta -->
                                     <div class="flex items-center w-full justify-between cursor-pointer lg:p-2 toggle-faq">
-                                        <h5 class="text-sky-950 text-xl font-bold">' .
+                                        <h5 class="py-2 text-sky-950 text-xl font-bold">' .
                                 $questions[$i] .
                                 '</h5>
                                         <span class="text-4xl text-stone-800 lg:mx-4 lg:p-2 button">+</span>
@@ -365,7 +357,7 @@ $answers = [
                                     <div class="hidden text-stone-800 lg:p-2 answer w-full" id="faq' .
                                 $i .
                                 '">
-                                        <p class="w-full">' .
+                                        <p class="p-2 w-full">' .
                                 $answers[$i] .
                                 '</p>
                                     </div>
@@ -376,13 +368,15 @@ $answers = [
                 </div>
             </section>
 
+            <div id="agendar"></div>
+
             <!-- Google Calendar -->
-            <section class="lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
+            <section class="mx-4 lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
                 <div class="lg:my-6 lg:flex lg:justify-center">
-                    <h4 class="lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Faça uma visita e conheça mais!</h4>
+                    <h4 class="p-2 lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Faça uma visita e conheça mais!</h4>
                 </div>
 
-                <div class="lg:flex lg:justify-center lg:my-8 text-stone-800 items-center lg:py-8">
+                <div class="my-2 m-0 w-full flex text-center justify-center h-[40vh] lg:flex lg:justify-center lg:my-8 text-stone-800 items-center lg:py-8">
                     <!-- Google Calendar Appointment Scheduling begin -->
                     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
                     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -409,107 +403,106 @@ $answers = [
 
 
             <!-- Contact -->
-            <section class="lg:px-16 lg:py-4 lg:mx-16 rounded lg:my-16 flex justify-between items-center bg-sky-700">
+            <section class="py-2 flex flex-col my-4 items-center lg:flex lg:flex-row lg:mx-16 bg-sky-700">
 
-                <div class="lg:mx-2">
-                    <h4 class="font-bold text-zinc-100 text-4xl">Quer mais informações?<h4>
-                    <p class="lg:my-4 text-zinc-100 text-xl">Solicite um orçamento para o seu evento ou confraternização conosco.</p>
-                    <p class="text-zinc-100 text-xl">Basta preencher o formulário ao lado</p>
+                <div class="w-full px-4 my-2 lg:mx-2 text-center lg:text-left lg:rounded lg:w-[60vw]">
+                    <h4 class="font-bold text-zinc-100 text-2xl lg:text-4xl">Quer mais informações?<h4>
+                    <p class="hidden lg:flex lg:my-4 text-zinc-100 text-xl">Solicite um orçamento para o seu evento ou confraternização conosco.</p>
+                    <p class="hidden lg:flex text-zinc-100 text-xl">Basta preencher o formulário ao lado</p>
                 </div>
 
                 <!-- Contact Form -->
-                <form class="lg:px-4 lg:py-4 w-[30vw] lg:flex lg:flex-col" action="budget" method="POST" id="">
-                    <div class="lg:my-2">
-                        <h4 class="font-bold text-zinc-100 text-3xl">Solicite um orçamento</h4>
+                <form class="w-full px-4 lg:px-6 lg:py-6 lg:w-[40vw] lg:flex lg:flex-col lg:rounded" action="budget" method="POST" id="">
+                    <div class="w-full lg:my-2 text-center">
+                        <h4 class="w-full font-bold text-zinc-100 text-2xl lg:text-3xl text-center">Solicite um orçamento</h4>
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-1">
+                    <div class="my-1 w-full lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="name">Nome</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="name" id="name" placeholder="Digite seu nome" autocomplete="name">
+                        <input class="w-full p-2 lg:p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="name" id="name" placeholder="Digite seu nome" autocomplete="name">
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-1">
+                    <div class="my-1 w-full lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="phone">Celular</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="phone" id="phone" placeholder="(DDD) 9XXXX-XXXX" autocomplete="phone">
+                        <input class="w-full p-2 lg:p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="text" name="phone" id="phone" placeholder="(DDD) 9XXXX-XXXX" autocomplete="phone">
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-1">
+                    <div class="my-1 w-full lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100" for="email">E-mail</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="email">
+                        <input class="w-full p-2 lg:p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500" type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="email">
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-1">
+                    <div class="my-1 w-full lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="date">Data do evento</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500 placeholder:text-zinc-500" placeholder="DD/MM/YYYY" type="date" name="date" id="date">
+                        <input class="w-full p-2 lg:p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500 placeholder:text-zinc-500" placeholder="DD/MM/YYYY" type="date" name="date" id="date">
                         <div class="" id="invalidDate"></div>
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-1">
+                    <div class="my-1 w-full lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="partcipants">Quantidade de convidados</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500 placeholder:text-zinc-500" placeholder="Quantidade de convidados" type="number" name="participants" id="partcipants" min="1" max="600">
+                        <input class="w-full p-2 lg:p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500 placeholder:text-zinc-500" placeholder="Quantidade de convidados" type="number" name="participants" id="partcipants" min="1" max="600">
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-1">
+                    <div class="my-1 w-full lg:flex lg:flex-col lg:my-1">
                         <label class="text-zinc-100 lg:my-1" for="type">Tipo de evento</label>
-                        <input class="p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500 placeholder:text-zinc-500" placeholder="Casamento, Aniversário, Festas, etc." type="text" name="eventType" id="type">
+                        <input class="w-full p-2 lg:p-1 bg-zinc-100 rounded outline-2 outline-zinc-100 transition-all duration-200 ease-in-out focus:outline-yellow-500 placeholder:text-zinc-500" placeholder="Casamento, Aniversário, Festas, etc." type="text" name="eventType" id="type">
                     </div>
 
-                    <div class="lg:flex lg:flex-col lg:my-2">
-                        <button class="font-medium cursor-pointer bg-yellow-400 rounded p-3 transition duration-200 ease-in-out active:scale-90 active:shadow-inner" type="submit">Enviar</button>
+                    <div class="my-4 w-full lg:flex lg:flex-col lg:my-2">
+                        <button class="w-full font-medium cursor-pointer bg-yellow-400 rounded p-3 transition duration-200 ease-in-out active:scale-90 active:shadow-inner" type="submit">Enviar</button>
                     </div>
-
                 </form>
             </section>
 
             <!-- Maps -->
-            <section class="lg:flex justify-center lg:my-4 lg:flex-col items-center">
+            <section class="mx-8 lg:my-4 lg:flex lg:justify-center lg:flex-col lg:mx-16 lg:py-6">
 
-                <div class="lg:my-6">
-                    <h4 class="text-4xl text-zinc-100 font-bold border bg-sky-700 rounded lg:px-28 lg:py-4">Localização</h4>
+                <div class="my-6 lg:my-6 lg:flex lg:justify-center">
+                    <h4 class="p-4 lg:p-4 lg:my-2 font-bold text-4xl bg-sky-700 rounded text-zinc-100 w-full text-center">Localização</h4>
                 </div>
 
                 <!-- Maps -->
-                <iframe class="w-[90%] h-[40vh] rounded border border-sky-700" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.939137955059!2d-46.372579325118245!3d-23.57062926193178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6fe9ff490431%3A0xb219426c7d73f900!2sCh%C3%A1cara%20Recanto%20Nazareno!5e0!3m2!1spt-BR!2sbr!4v1741752703537!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="my-4 w-full h-[40vh] rounded border border-sky-700" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.939137955059!2d-46.372579325118245!3d-23.57062926193178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6fe9ff490431%3A0xb219426c7d73f900!2sCh%C3%A1cara%20Recanto%20Nazareno!5e0!3m2!1spt-BR!2sbr!4v1741752703537!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
         </main>
 
         <!-- Footer -->
-        <footer class="bg-sky-800 lg:px-10 lg:flex lg:flex-col lg:py-5 lg:w-full">
+        <footer class="bg-sky-800 flex flex-col lg:px-10 lg:flex lg:flex-col lg:py-5 lg:w-full">
 
-            <div class="grid grid-cols-3 gap-2">
+            <div class="grid grid-cols-1 lg:grid lg:grid-cols-3 lg:gap-2 items-center">
                 <!-- Social -->
                 <div class="lg:flex lg:flex-col lg:p-8">
 
-                    <div class="lg:my-4">
-                        <h4 class="py-2 text-zinc-200 font-bold text-xl">Siga-nos nas redes sociais</h4>
+                    <div class="flex justify-center my-4 lg:my-4">
+                        <h4 class="py-2 text-zinc-100 font-bold text-xl">Siga-nos nas redes sociais</h4>
                     </div>
 
                     <!-- Social Links -->
-                    <div class="lg:flex">
+                    <div class="flex w-full justify-center lg:flex">
 
                         <!-- Instagram -->
-                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://instagram.com/" target="_blank" title="Instagram">
+                        <a class="bg-gradient-to-t from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-full p-2 mr-3" href="https://instagram.com/recanto_nazareno/" target="_blank" title="Instagram">
                             <img class="w-6" src="<?= htmlspecialchars(
                                 $assets["icons"]
                             ) ?>Instagram.svg" alt="Instagram">
                         </a>
 
                         <!-- Facebook -->
-                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://facebook.com/" target="_blank" title="Facebook">
+                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://www.facebook.com/people/Ch%C3%A1cara-Recanto-Nazareno/61574270684238/" target="_blank" title="Facebook">
                             <img class="w-6" src="<?= htmlspecialchars(
                                 $assets["icons"]
                             ) ?>Facebook.svg" alt="Facebook">
                         </a>
 
                         <!-- TikTok -->
-                        <a class="bg-zinc-100 rounded-full p-2 mr-3" href="https://tiktok.com/" target="_blank" title="TikTok">
+                        <a class="bg-black rounded-full p-2 mr-3" href="https://tiktok.com/@recanto_nazareno/" target="_blank" title="TikTok">
                             <img class="w-6" src="<?= htmlspecialchars(
                                 $assets["icons"]
                             ) ?>TikTok.svg" alt="TikTok">
                         </a>
 
                         <!-- YouTube -->
-                        <a class="bg-zinc-100 rounded-full p-2" href="https://youtube.com/" target="_blank" title="YouTube">
+                        <a class=" rounded-full p-2 bg-red-600" href="https://www.youtube.com/channel/UCsIqVqh3txdH31S2kgmDojA/" target="_blank" title="YouTube">
                             <img class="w-6" src="<?= htmlspecialchars(
                                 $assets["icons"]
                             ) ?>YouTube.svg" alt="YouTube">
@@ -518,45 +511,45 @@ $answers = [
                 </div>
 
                 <!-- Contact -->
-                <div class="lg:flex lg:flex-col lg:p-8">
-                    <div class="lg:my-4">
-                        <h4 class="py-2 text-zinc-200 font-bold text-xl">Contato</h4>
+                <div class="flex justify-center flex-col my-2 lg:flex lg:flex-col lg:p-8">
+                    <div class="flex justify-center my-4 lg:my-4">
+                        <h4 class="py-2 text-zinc-100 font-bold text-xl">Contato</h4>
                     </div>
 
-                    <div class="lg:flex lg:flex-col">
-                        <span class="text-zinc-100 font-bold my-1">E-mail: <a class="text-zinc-100 font-normal underline" href="mailto:contato@recantonazareno.com.br" title="Envie um e-mail">contato@recantonazareno.com.br</a></span>
-                        <span class="text-zinc-100 font-bold my-1">WhatsApp: <a class="text-zinc-100 font-normal underline" href="https://wa.me/+551136180643" title="Chamar no WhatsApp Business">(11) 93618-0643</a></span>
+                    <div class="flex justify-center text-center flex-col lg:flex lg:flex-col">
+                        <span class="text-zinc-100 font-bold lg:my-1 my-2">E-mail: <br class="lg:hidden"> <a class="text-zinc-100 font-normal underline" href="mailto:contato@recantonazareno.com.br" title="Envie um e-mail">contato@recantonazareno.com.br</a></span>
+                        <span class="text-zinc-100 font-bold lg:my-1 my-2">WhatsApp: <br class="lg:hidden"> <a class="text-zinc-100 font-normal underline" href="https://wa.me/+551136180643" title="Chamar no WhatsApp Business">(11) 93618-0643</a></span>
                     </div>
                 </div>
 
                 <!-- About -->
-                <div class="lg:flex lg:flex-col lg:p-8">
-                    <div class="lg:my-4">
+                <div class="flex items-center justify-center flex-col lg:flex lg:flex-col lg:p-8">
+                    <div class="flex items-center justify-center lg:my-4">
                         <h4 class="py-2 text-zinc-200 font-bold text-xl">Sobre</h4>
                     </div>
 
-                    <div class="lg:flex lg:flex-col">
-                        <p class="text-zinc-100">Recanto Nazareno é uma chácara com espaço para eventos e festas com piscina.</p>
+                    <div class="flex items-center justify-center text-center my-4 lg:flex lg:flex-col">
+                        <p class="p-2 text-zinc-100">Recanto Nazareno é uma chácara com espaço para eventos e festas com piscina.</p>
                     </div>
                 </div>
             </div>
         </footer>
 
         <!-- Copyright -->
-        <div class="bg-sky-800 lg:p-5 lg:flex lg:justify-center font-medium text-zinc-300">© 2025 Chácara Recanto Nazareno. Todos os Direitos Reservados. Desenvolvido por <a class="mx-1 underline text-zinc-300" href="https://github.com/MarleyS439/" target="_blank">Marley Santos</a></div>
+        <div class="bg-sky-600 text-center p-2 py-4 lg:p-5 lg:flex lg:justify-center font-medium text-zinc-100">© 2025 Chácara Recanto Nazareno. Todos os Direitos Reservados. Desenvolvido por <a class="mx-1 underline text-zinc-100" href="https://github.com/MarleyS439/" target="_blank">Marley Santos</a></div>
 
         <!-- WhatsApp -->
-        <div class="right-16 bottom-16 fixed z-[10000] cursor-pointer">
+        <a href="https://wa.me/5511936180643" class="right-8 bottom-16 lg:right-16 lg:bottom-16 fixed z-[10000] cursor-pointer">
             <img class="w-14 pointer-events-none" src="<?= htmlspecialchars(
                 $assets["icons"]
             ) ?>WhatsApp.png" alt="WhatsApp">
-        </div>
+        </a>
 
         <!-- Cookies -->
-        <div class="fixed bottom-10 z-[1000] bg-white/95 backdrop-blur-md grid place-items-center p-4 shadow-xl shadow-black/20 rounded w-1/2" id="cookies">
+        <div class="fixed w-full bottom-18 lg:bottom-10 z-[100000] bg-white/95 backdrop-blur-md grid place-items-center p-4 shadow-xl shadow-black/20 rounded lg:w-1/2" id="cookies">
             <div class="w-full">
-                <p class="text-left">Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a class="text-sky-700" href="cookies">Política de Cookies.</a></p>
-                <div class="flex justify-end lg:p-2">
+                <p class="text-left my-4 lg:m-0">Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a class="text-sky-700" href="cookies">Política de Cookies.</a></p>
+                <div class="flex justify-center lg:flex lg:justify-end lg:p-2">
                     <button class="bg-sky-700 text-white p-2 px-8 rounded hover:bg-sky-800" type="button" aria-label="Permitir cookies" id="permited" onclick="consentGrantedAdStorage()">Permitir</button>
                     <button class="border border-sky-700 text-sky-700 p-2 px-8 rounded hover:bg-gray-200 ml-2" type="button" aria-label="Recusar cookies" id="recused">Recusar</button>
                 </div>
@@ -643,7 +636,7 @@ $answers = [
               });
 
               // Phone Number Formatter
-              $("#celular").on("input", function () {
+              $("#phone").on("input", function () {
               var input = $(this).val().replace(/\D/g, "");
                 if (input.length > 0) {
                   input = input.match(/^(\d{0,2})(\d{0,5})(\d{0,4})$/);
@@ -654,6 +647,16 @@ $answers = [
                   });
                 }
               });
+
+              // Name Formatter
+              $("#name").on("blur", function () {
+                  var name = $(this).val().trim();
+                  if (name) {
+                      name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+                      $(this).val(name);
+                  }
+              });
+
             });
           }) ();
         </script>
