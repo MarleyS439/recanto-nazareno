@@ -3,3 +3,7 @@ node_modules/
 
 # Ignorar o arquivo config.ini em config/
 config/config.ini
+
+
+# Ignorar a diretório do composer
+vendor/
